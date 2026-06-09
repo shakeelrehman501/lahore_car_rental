@@ -7,6 +7,18 @@ import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { AnimatedItem } from "@/components/ui/AnimatedItem";
 
 function ProjectCard({ image, name, description, price }: popularCarCardType) {
+  const handleWhatsApp = (name:string, price:string|number) => {
+    const phoneNumber = "923004611570"; 
+
+    const message = `Hello, I want to rent this car:
+    Car Name: ${name}
+    Price: ${price}/day`;
+
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+    window.open(whatsappURL, "_blank", "noopener,noreferrer");
+  };
+
   return (
     <div className="min-w-80 bg-white rounded-lg overflow-hidden  shadow-md hover:shadow-2xl transition-all duration-300  hover:-translate-y-2 group ease-in-out">
       {/* Car Image */}
@@ -39,11 +51,11 @@ function ProjectCard({ image, name, description, price }: popularCarCardType) {
           <h1 className="text-[22px] text-gray-700  font-poppins font-semibold group-hover:text-primary transition-all duration-300 ease-in-out">
             PKR {price}/day
           </h1>
-          <Link href={'/contact'}>
-          <button className="px-3 py-2 font-semibold bg-[#FF2E2E] hover:bg-[#e02626] text-white  rounded-md transition-all duration-300 hover:shadow-lg cursor-pointer">
-            Rent Now
-          </button>
-          </Link>
+            <button
+            onClick={() => handleWhatsApp(name, price)}
+            className="px-3 py-2 font-semibold bg-[#FF2E2E] hover:bg-[#e02626] text-white  rounded-md transition-all duration-300 hover:shadow-lg cursor-pointer">
+              Rent Now
+            </button>
         </div>
       </div>
     </div>

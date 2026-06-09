@@ -18,7 +18,7 @@ export default function Home() {
             className="object-cover z-0  w-full  hidden lg:block
             lg:h-190
             xl:h-225
-            2xl:h-240
+            2xl:h-242
             "
           />
       <Image
