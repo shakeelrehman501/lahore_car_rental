@@ -11,8 +11,8 @@ function ProjectCard({ image, name, description, price }: popularCarCardType) {
     const phoneNumber = "923004611570"; 
 
     const message = `Hello, I want to rent this car:
-    Car Name: ${name}
-    Price: ${price}/day`;
+Car Name: ${name}
+Price: ${price}/day`;
 
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 

@@ -3,6 +3,7 @@ import { bricolage, poppins } from "@/lib/fonts";
 import "./globals.css";
 import Footer from "@/components/service/Footer";
 import { BsWhatsapp } from "react-icons/bs";
+import AppLoader from "@/components/ui/AppLoader";
 
 export default function RootLayout({
   children,
@@ -14,6 +15,7 @@ export default function RootLayout({
       <body
         className={`min-h-screen flex flex-col  ${bricolage.variable} ${poppins.variable} `}
       >
+        <AppLoader>
         <Navbar />
         <main>{children}</main>
         <a
@@ -30,6 +32,7 @@ export default function RootLayout({
         </a>
 
         <Footer />
+        </AppLoader>
       </body>
     </html>
   );

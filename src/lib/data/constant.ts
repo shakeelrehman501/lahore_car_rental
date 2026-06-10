@@ -13,6 +13,7 @@ export const navItems = [
   { id: "about", label: "About Us" },
 ];
 
+
 export interface BrandType {
   name:string,
   image:string
@@ -46,6 +47,7 @@ export const brands:BrandType[] = [
   },
 ];
 
+
 export interface popularCarCardType {
   id: number;
   name: string;
@@ -59,35 +61,35 @@ export const popularCarCard:popularCarCardType[] = [
     id: 1,
     name: "Land Cruiser v8 LC300",
     description:"Experience elite luxury, unmatched power and premium comfort for every journey",
-    price: "30,000",
+    price: "50,000",
     image: "/cardImages/card_img_1.webp",
   },
   {
     id: 2,
     name: "Toyota Carolla",
     description:"Reliable, fuel-efficient and comfortable sedan for daily city and family travel.",
-    price: "8,000",
+    price: "7,000",
     image: "/cardImages/card_img_2.webp",
   },
   {
     id: 3,
     name: "Parado",
     description:"Luxury SUV built for comfort, adventure and unforgettable driving experiences everywhere.",
-    price: "25,000",
+    price: "18,000",
     image: "/cardImages/card_img_3.png",
   },
   {
     id: 4,
     name: "Honda Sivic",
     description:"Stylish sedan delivering premium comfort, smooth performance and modern driving experience.",
-    price: "15,000",
+    price: "10,000",
     image: "/cardImages/card_img_4.webp",
   },
   {
     id: 5,
     name: "Grandi X",
     description:"Premium sedan combining elegant design, comfort and advanced driving technology features.",
-    price: "13,000",
+    price: "8,000",
     image: "/cardImages/card_img_5.webp",
   },
   {
@@ -99,11 +101,13 @@ export const popularCarCard:popularCarCardType[] = [
   },   
 ];  
 
+
 export interface WhyChooseUsType {
   icon:IconType;
   title:string;
   description:string
 }
+
 export const whyChooseUsFeatures:WhyChooseUsType[] = [
   {
     icon: Shield,
@@ -131,6 +135,7 @@ export const whyChooseUsFeatures:WhyChooseUsType[] = [
     description: 'Drive as much as you want with no mileage restrictions.',
   },
 ];
+
 
 export const feedbackCardItems = [
   {
@@ -177,6 +182,7 @@ export const feedbackCardItems = [
   },
 ];
 
+
 export interface ContactCardType {
   icon:IconType,
   title:string,
@@ -200,11 +206,14 @@ export const contactCardData:ContactCardType[] = [
     data:"153-H, Commercial Zone, Phase 1, DHA Lahore Cantt, Lahore"
   },
 ]
+
+
 export interface AboutCardType {
   icon:IconType;
   title:string;
   description:string
 }
+
 export const aboutCardData:AboutCardType[] = [
   {
     icon: Shield,
@@ -233,11 +242,13 @@ export const aboutCardData:AboutCardType[] = [
   }
 ];
 
+
 export interface Links {
   name: string;
   icon:IconType;
   href:string
 }
+
 export const socialLinks:Links[] = [
     {
       name: "Facebook",
