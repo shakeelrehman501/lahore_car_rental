@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-      <main className="w-full  bg-white">
+      <main className="  bg-white">
       <div className="relative">
       <Image
             src="/others/hero_bg_desktop.webp"
