@@ -2,8 +2,15 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
-@custom-variant dark (&:is(.dark *));
+/* html,
+body {
+  overflow-x: hidden;
+} */
 
+
+/* * {
+  outline: 1px solid red;
+} */
 
 @keyframes whatsappPulse {
   0% {

@@ -16,7 +16,9 @@ export default function RootLayout({
         className={` flex flex-col  ${bricolage.variable} ${poppins.variable} `}
       >
         <AppLoader>
+        <div className="w-full bg-blue-700">
         <Navbar />
+        </div>
         <main>{children}</main>
         <a
           href="https://wa.me/923004611570"

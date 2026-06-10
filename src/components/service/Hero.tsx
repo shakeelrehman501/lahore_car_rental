@@ -85,7 +85,7 @@ function HeroSection() {
             lg:min-w-140 lg:max-w-250 lg:pt-12
             xl:min-w-170
             2xl:min-w-210
-            3xl:min-w-240 
+            3xl:min-w-240
             "
           />
         </AnimatedItem>
