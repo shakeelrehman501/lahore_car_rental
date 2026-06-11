@@ -9,7 +9,7 @@ function WhyChooseUsCard({ icon: Icon, title, description }: WhyChooseUsType) {
   return (
     <div className="group">
       <div className="flex items-start gap-4 lg:gap-6 hover:bg-gray-100 px-3 py-2 lg:py-4 rounded-sm">
-        <div className="flex-shrink-0 w-10 h-10 bg-red-50 rounded-full flex items-center justify-center group-hover:bg-red-500 transition-colors duration-300">
+        <div className="shrink-0 w-10 h-10 bg-red-50 rounded-full flex items-center justify-center group-hover:bg-red-500 transition-colors duration-300">
           <Icon className="w-5.5 h-5.5 text-red-500 group-hover:text-white transition-colors duration-300" />
         </div>
         <div>

@@ -1,10 +1,16 @@
-"use client"
-import { useState } from 'react';
-import { Map, Marker } from 'pigeon-maps';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Car, MapPin, DollarSign, ExternalLink, Navigation, Plus, Minus } from 'lucide-react';
+"use client";
+import { useState } from "react";
+import { Map, Marker } from "pigeon-maps";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import {
+  Car,
+  MapPin,
+  ExternalLink,
+  Navigation,
+  Plus,
+  Minus,
+} from "lucide-react";
 
 interface CarLocation {
   id: number;
@@ -16,9 +22,10 @@ interface CarLocation {
 // Main rental location
 const mainLocation: CarLocation = {
   id: 1,
-  name: 'Lahore Rent Car',
+  name: "Lahore Rent Car",
   position: [31.482415092463697, 74.39727120784275],
-  address: '153-H, Commercial Zone, Phase 1, DHA Lahore Cantt, Lahore, Pakistan'
+  address:
+    "153-H, Commercial Zone, Phase 1, DHA Lahore Cantt, Lahore, Pakistan",
 };
 
 export function CarRentalMap() {
@@ -34,12 +41,12 @@ export function CarRentalMap() {
 
   const openInGoogleMaps = () => {
     const url = `https://www.google.com/maps/search/?api=1&query=${mainLocation.position[0]},${mainLocation.position[1]}`;
-    window.open(url, '_blank');
+    window.open(url, "_blank");
   };
 
   const getDirections = () => {
     const url = `https://www.google.com/maps/dir/?api=1&destination=${mainLocation.position[0]},${mainLocation.position[1]}`;
-    window.open(url, '_blank');
+    window.open(url, "_blank");
   };
 
   return (
@@ -50,10 +57,7 @@ export function CarRentalMap() {
         zoom={zoom}
         onBoundsChanged={({ zoom: newZoom }) => setZoom(newZoom)}
       >
-        <Marker
-          anchor={mainLocation.position}
-          color="#dc2626"
-        />
+        <Marker anchor={mainLocation.position} color="#dc2626" />
       </Map>
 
       {/* Zoom Controls */}
@@ -87,7 +91,7 @@ export function CarRentalMap() {
           </CardHeader>
           <CardContent className="space-y-4 -mt-3">
             <div className="flex items-start gap-2 text-sm">
-              <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0 text-muted-foreground" />
+              <MapPin className="w-4 h-4 mt-0.5 shrink-0 text-muted-foreground" />
               <p className="text-muted-foreground text-sm">
                 {mainLocation.address}
               </p>

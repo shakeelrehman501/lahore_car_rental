@@ -25,7 +25,7 @@ Thank you.`;
   return (
     <div className="min-w-80 bg-white rounded-lg overflow-hidden  shadow-md hover:shadow-2xl transition-all duration-300  hover:-translate-y-2 group ease-in-out">
       {/* Car Image */}
-      <div className="relative overflow-hidden h-80 bg-gradient-to-br from-gray-100 to-gray-200">
+      <div className="relative overflow-hidden h-80 bg-linear-to-br from-gray-100 to-gray-200">
         {loading && (
               <div className="absolute inset-0 bg-gray-300 dark:bg-gray-700 animate-pulse" />
             )}

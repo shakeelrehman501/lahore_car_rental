@@ -42,7 +42,7 @@ const Navbar = () => {
               <Link href="/">
                 <Image
                   onClick={handleClick}
-                  src={`${isScrolled ? "/others/black_logo.png" : "/others/white_logo.png"}`}
+                  src={`${isScrolled ? "/others/black_logo.webp" : "/others/white_logo.webp"}`}
                   alt="3D Model"
                   width={200}
                   height={200}

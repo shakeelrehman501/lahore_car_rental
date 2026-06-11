@@ -66,7 +66,7 @@ function FeedbackCard({ CarouselContent, CarouselItem, active }: Props) {
                       </div>
                       <div className="">
                         <Image
-                          src="/others/ReviewStar.png"
+                          src="/others/ReviewStar.webp"
                           width={400}
                           height={400}
                           alt="Star"

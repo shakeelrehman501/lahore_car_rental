@@ -87,7 +87,7 @@ export default function Footer() {
                 <li className="flex items-start gap-3 text-gray-400">
                   <MapPin
                     size={20}
-                    className="flex-shrink-0 text-[#FF2E2E] mt-1"
+                    className="shrink-0 text-[#FF2E2E] mt-1"
                   />
                   <span>
                     153-H, Commercial Zone, Phase 1, DHA Lahore Cantt, Lahore,
@@ -95,11 +95,11 @@ export default function Footer() {
                   </span>
                 </li>
                 <li className="flex items-center gap-3 text-gray-400">
-                  <Phone size={20} className="flex-shrink-0 text-[#FF2E2E]" />
+                  <Phone size={20} className="shrink-0 text-[#FF2E2E]" />
                   <span>+92 335 4611570</span>
                 </li>
                 <li className="flex items-center gap-3 text-gray-400">
-                  <Mail size={20} className="flex-shrink-0 text-[#FF2E2E]" />
+                  <Mail size={20} className="shrink-0 text-[#FF2E2E]" />
                   <span>lahorecarrent@gmail.com</span>
                 </li>
               </ul>

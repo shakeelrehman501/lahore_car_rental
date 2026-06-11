@@ -43,7 +43,7 @@ export const brands:BrandType[] = [
   {
     name: "Ferrari",
     image:
-      "/others/parado.png",
+      "/others/parado.webp",
   },
 ];
 
@@ -76,7 +76,7 @@ export const popularCarCard:popularCarCardType[] = [
     name: "Parado",
     description:"Luxury SUV built for comfort, adventure and unforgettable driving experiences everywhere.",
     price: "18,000",
-    image: "/cardImages/card_img_3.png",
+    image: "/cardImages/card_img_3.webp",
   },
   {
     id: 4,

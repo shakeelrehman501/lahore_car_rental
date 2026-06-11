@@ -34,7 +34,7 @@ function Heading({ heading, gradientHeading, paragraph, className }: Props) {
       </AnimatedItem>
 
       <AnimatedItem type='scale' index={2}>
-        <div className="mt-6 mx-auto w-24 h-1 rounded-full bg-gradient-to-r from-primary to-secondary" />
+        <div className="mt-6 mx-auto w-24 h-1 rounded-full bg-linear-to-r from-primary to-secondary" />
       </AnimatedItem>
     </AnimatedSection>
   );

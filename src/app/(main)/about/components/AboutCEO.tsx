@@ -18,7 +18,7 @@ export default function AboutCEO() {
           <div className="relative flex items-end justify-center">
             {/* Photo */}
             <Image
-              src="/others/ceo_img.png"
+              src="/others/ceo_img.webp"
               alt="3D Model"
               width={4000}
               height={4000}
@@ -40,7 +40,7 @@ export default function AboutCEO() {
               </p>
               <div className="mt-3">
                 <Image
-              src="/others/ceo_sign.png"
+              src="/others/ceo_sign.webp"
               alt="3D Model"
               width={4000}
               height={4000}
@@ -89,7 +89,7 @@ export default function AboutCEO() {
 
             <div className="mb-8">
               <Image
-              src="/others/ceo_sign.png"
+              src="/others/ceo_sign.webp"
               alt="3D Model"
               width={4000}
               height={4000}
