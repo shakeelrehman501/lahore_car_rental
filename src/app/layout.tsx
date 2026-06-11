@@ -5,6 +5,13 @@ import Footer from "@/components/service/Footer";
 import { BsWhatsapp } from "react-icons/bs";
 import AppLoader from "@/components/ui/AppLoader";
 
+export const metadata = {
+  title: "Rent a Car in Lahore | Car Rent Lahore ",
+  icons: {
+    icon: "/others/fav_icon.jpeg",
+  },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
