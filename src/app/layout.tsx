@@ -10,8 +10,10 @@ export const metadata = {
   icons: {
     icon: "/others/fav_icon.jpeg",
   },
+  other: {
+    "google-site-verification": "XDPj6IxXk0oZizE8lLVtNfhIL2li0sB_jWUHzdqZ33g",
+  },
 };
-
 
 export default function RootLayout({
   children,
