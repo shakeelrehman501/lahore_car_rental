@@ -100,7 +100,7 @@ export default function Footer() {
                 </li>
                 <li className="flex items-center gap-3 text-gray-400">
                   <Mail size={20} className="flex-shrink-0 text-[#FF2E2E]" />
-                  <span>soukatali5@gmail.com</span>
+                  <span>lahorecarrent@gmail.com</span>
                 </li>
               </ul>
             </AnimatedItem>

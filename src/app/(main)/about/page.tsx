@@ -4,6 +4,8 @@ import { AnimatedItem } from "@/components/ui/AnimatedItem";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { aboutCardData, AboutCardType } from "@/lib/data/constant";
 import AboutCEO from "./components/AboutCEO";
+import Image from "next/image";
+import { useState } from "react";
 
 function AboutCard({ icon: Icon, title, description }: AboutCardType) {
   return (
@@ -24,14 +26,21 @@ function AboutCard({ icon: Icon, title, description }: AboutCardType) {
 }
 
 function About() {
+   const [loading, setLoading] = useState(false);
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <div className="relative h-[300px] md:h-[300px] lg:h-[400px] w-full">
-        <img
+      <div className="relative h-75 md:h-90 lg:h-110 xl:h-120 2xl:h-150 w-full">
+        {loading && (
+              <div className="absolute inset-0 bg-gray-300  animate-pulse" />
+            )}
+        <Image
           src="/others/aboutus.webp"
-          alt="City Skyline"
-          className="w-full h-full object-cover"
+          alt="About_Image"
+          width={3000}
+          height={2000}
+          onLoad={() => setLoading(false)}
+          className={`w-full h-full object-cover ${loading ? "opacity-0" : "opacity-100"}`}
         />
         <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
           <h1 className="text-white text-3xl md:text-4xl lg:text-5xl font-bold tracking-wider">

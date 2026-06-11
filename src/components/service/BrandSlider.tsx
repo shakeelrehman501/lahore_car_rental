@@ -16,9 +16,10 @@ function BrandCard({name, image}:BrandType) {
         <Image
           src={image}
           alt={name}
-          width={2000}
-          height={2000}
+          width={800}
+          height={600}
           className="object-contain"
+          loading="lazy"
         />
       </div>
 

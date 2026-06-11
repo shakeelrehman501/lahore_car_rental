@@ -1,12 +1,13 @@
 "use client";
-
 import { popularCarCard, popularCarCardType } from "@/lib/data/constant";
 import Heading from "../myComponents/Heading";
-import Link from "next/link";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { AnimatedItem } from "@/components/ui/AnimatedItem";
+import { useState } from "react";
+import Image from "next/image";
 
 function ProjectCard({ image, name, description, price }: popularCarCardType) {
+  const [loading, setLoading] = useState(true);
   const handleWhatsApp = (name:string, price:string|number) => {
     const phoneNumber = "923004611570"; 
 
@@ -17,23 +18,27 @@ Thank you.`;
 
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
-    window.open(whatsappURL, "_blank", "noopener,noreferrer");
+    window.open(whatsappURL, "_blank");
+    // window.open(whatsappURL, "_blank", "noopener,noreferrer");
   };
 
   return (
     <div className="min-w-80 bg-white rounded-lg overflow-hidden  shadow-md hover:shadow-2xl transition-all duration-300  hover:-translate-y-2 group ease-in-out">
       {/* Car Image */}
       <div className="relative overflow-hidden h-80 bg-gradient-to-br from-gray-100 to-gray-200">
-        {/* {!imageLoaded && (
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-12 h-12 border-4 border-[#FF2E2E]/30 border-t-[#FF2E2E] rounded-full animate-spin"></div>
-          </div>
-        )} */}
-        <img
+        {loading && (
+              <div className="absolute inset-0 bg-gray-300 dark:bg-gray-700 animate-pulse" />
+            )}
+        <Image
           src={image}
           alt={name}
-          className={`w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 
-          }`}
+          width={2000}
+          height={1600}
+          onLoad={() => setLoading(false)}
+          className={`w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 ${
+                loading ? "opacity-0" : "opacity-100"
+              }
+          `}
           loading="lazy"
         />
       </div>
@@ -64,6 +69,7 @@ Thank you.`;
 }
 
 function PopularCars() {
+  
   return (
     <section
       id="projects"

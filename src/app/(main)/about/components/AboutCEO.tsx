@@ -93,10 +93,8 @@ export default function AboutCEO() {
               alt="3D Model"
               width={4000}
               height={4000}
-              priority={true}
-              className="object-cover  max-w-25 
-                        
-                        "
+              loading="lazy"
+              className="object-cover  max-w-25"
             />
               <p className="text-[13px] text-gray-500 mt-1">
                 Founder &amp; CEO, Car Rental

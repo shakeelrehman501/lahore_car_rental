@@ -8,7 +8,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { CarRentalMap } from "./component/Map";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { AnimatedItem } from "@/components/ui/AnimatedItem";
-
+import Image from "next/image";
 
 function ContactInfoCard({ icon: Icon, title, data }: ContactCardType) {
   return (
@@ -47,7 +47,7 @@ function Contact() {
 
     emailjs
       .send(
-        "service_x6v1n2l", // 🔴 Service ID
+        "service_2yk2iq9", // 🔴 Service ID
         "template_sa4dvhq", // 🔴 Template ID
         formData,
         "7mNHnEab_e7n2iQgm", // 🔴 Public Key
@@ -57,8 +57,11 @@ function Contact() {
           toast.success("Email sent successfully ✅");
           setFormData({ name: "", email: "", message: "" });
         },
-        () => {
+        (error) => {
           toast.error("Email sending failed ❌");
+          console.log("Status:", error.status);
+          console.log("Text:", error.text);
+          console.log("error:", error);
         },
       )
       .finally(() => {
@@ -72,7 +75,8 @@ function Contact() {
   return (
     <section
       id="contact"
-      className="bg-gray-50 dark:bg-gray-900  transition-colors">
+      className="bg-gray-50 dark:bg-gray-900  transition-colors"
+    >
       {/* Background Image */}
       <ToastContainer
         position="top-right"
@@ -83,11 +87,17 @@ function Contact() {
         draggable
       />
 
-      <div className="relative h-[200px] md:h-[300px] lg:h-[600px] w-full">
-        <img
+      <div className="relative h-75 md:h-90 lg:h-110 xl:h-120 2xl:h-150 w-full">
+        {loading && (
+          <div className="absolute inset-0 bg-gray-300  animate-pulse" />
+        )}
+        <Image
           src="/others/contactus.webp"
-          alt="City Skyline"
-          className="w-full h-full object-cover"
+          width={3000}
+          height={2000}
+          alt="City_Skyline"
+          onLoad={() => setLoading(false)}
+          className={`w-full h-full object-cover ${loading ? "opacity-0" : "opacity-100"}`}
         />
         <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
           <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-bold tracking-wider">
@@ -117,9 +127,11 @@ function Contact() {
 
           {/* Right Side - Contact Form */}
           <AnimatedSection>
-            <AnimatedItem type="slideRight" index={0}
-              
-              className="bg-white dark:bg-[#0f172a] rounded-3xl p-10 border border-[#e2e8f0] dark:border-[#1e293b] shodow shadow-sm transition-colors">
+            <AnimatedItem
+              type="slideRight"
+              index={0}
+              className="bg-white dark:bg-[#0f172a] rounded-3xl p-10 border border-[#e2e8f0] dark:border-[#1e293b] shodow shadow-sm transition-colors"
+            >
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Name Input */}
                 <div>
@@ -175,7 +187,7 @@ function Contact() {
           </AnimatedSection>
         </div>
       </div>
-      <CarRentalMap/>
+      <CarRentalMap />
     </section>
   );
 }

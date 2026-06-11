@@ -193,7 +193,7 @@ export const contactCardData:ContactCardType[] = [
   {
     icon:HiOutlineMail, 
     title:"Email",
-    data:"soukatali5@gmail.com"
+    data:"lahorecarrent@gmail.com"
   },
   {
     icon:FiPhoneCall, 

@@ -1,8 +1,9 @@
-import { CheckCircle2 } from "lucide-react";
+
 import { whyChooseUsFeatures, WhyChooseUsType } from "../../lib/data/constant";
 import Heading from "@/components/myComponents/Heading";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { AnimatedItem } from "@/components/ui/AnimatedItem";
+import Image from "next/image";
 
 function WhyChooseUsCard({ icon: Icon, title, description }: WhyChooseUsType) {
   return (
@@ -40,9 +41,12 @@ export default function WhyChooseUs() {
             <AnimatedItem type="slideLeft" index={0}>
               <div className="relative">
                 <div className="relative z-10 px-3 lg:px-1">
-                  <img
-                    src="others/fortuner_car.webp"
+                  <Image
+                    src="/others/fortuner_car.webp"
                     alt="Car"
+                    width={2000}
+                    height={1400}
+                    loading="lazy"
                     className="w-full h-90 sm:h-120 object-cover rounded-lg "
                   />
                 </div>
