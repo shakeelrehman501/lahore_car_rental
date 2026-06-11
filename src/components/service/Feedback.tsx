@@ -27,7 +27,7 @@ function Feedback() {
     <AnimatedSection className="py-15">
         
       <div className="w-full mx-auto   flex justify-center items-center">
-        <div className='z-10'>
+        <div className='z-10 px-2'>
         <Heading
           heading="What Our "
           gradientHeading="Clients Say"

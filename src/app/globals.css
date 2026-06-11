@@ -2,15 +2,7 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
-/* html,
-body {
-  overflow-x: hidden;
-} */
-
-
-/* * {
-  outline: 1px solid red;
-} */
+@custom-variant dark (&:is(.dark *));
 
 @keyframes whatsappPulse {
   0% {
@@ -38,7 +30,6 @@ body {
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
-
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
 
@@ -81,7 +72,7 @@ body {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --primary: oklab(56.958% 0.19026 0.09899);
+    --primary: lab(47.07% 66.74 47.43);
     --primary-foreground: oklch(0.985 0 0);
     --secondary: oklch(0.205 0 0);
     --secondary-foreground: oklch(0.97 0 0);

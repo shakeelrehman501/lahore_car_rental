@@ -15,7 +15,7 @@ function WhyChooseUsCard({ icon: Icon, title, description }: WhyChooseUsType) {
           <h4 className="font-semibold text-gray-900 mb-1 text-[18px]">
             {title}
           </h4>
-          <p className="text-[16px] text-gray-600 leading-relaxed">
+          <p className="text-[15px] sm:text-[16px] text-gray-600 leading-6 sm:leading-relaxed">
             {description}
           </p>
         </div>
@@ -43,7 +43,7 @@ export default function WhyChooseUs() {
                   <img
                     src="others/fortuner_car.webp"
                     alt="Car"
-                    className="w-full h-120 object-cover rounded-lg "
+                    className="w-full h-90 sm:h-120 object-cover rounded-lg "
                   />
                 </div>
               </div>

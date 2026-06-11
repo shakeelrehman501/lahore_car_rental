@@ -28,13 +28,13 @@ const Navbar = () => {
   return (
     <>
       <AnimatedSection>
-        <header className="w-full">
-          <AnimatedItem type="fade" index={0} className="fixed top-0 left-0 w-full z-50 transition-all duration-400 ease-in-out">
+        <header className="w-full ">
+          <AnimatedItem type="fade" index={0} className="fixed top-0 left-0 w-full px-1 z-50 transition-all duration-400 ease-in-out">
             <div
-              className={`max-w-350 w-full mx-auto flex justify-between items-center  
+              className={`max-w-350 w-full mx-auto  flex justify-between items-center  
        ${
          isScrolled
-           ? "bg-primary-foreground text-secondary py-2 sm:py-0 pl-6 sm:pl-8 pr-3  rounded-full shadow-xl outline outline-gray-200 outline-none  translate-y-4 scale-98 2xl:scale-100 transition-all duration-400 ease-in-out "
+           ? "bg-primary-foreground text-secondary py-2 sm:py-0 pl-3 sm:pl-5 pr-3  rounded-full shadow-xl outline outline-gray-200 outline-none  translate-y-4 scale-98 2xl:scale-100 transition-all duration-400 ease-in-out "
            : "px-6 md:px-3 2xl:px-0 text-primary-foreground  transition-all duration-400 ease-in-out   sm:py-5 pt-4 sm:pt-3 "
        }`}
             >
@@ -47,7 +47,7 @@ const Navbar = () => {
                   width={200}
                   height={200}
                   priority={true}
-                  className="w-24 sm:w-28 2xl:w-32 cursor-pointer text-secondary  p-1"
+                  className="w-36 sm:w-40 2xl:w-44 cursor-pointer text-secondary  p-1"
                 />
               </Link>
               {/* Desktop Navbar */}

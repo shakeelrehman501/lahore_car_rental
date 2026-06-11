@@ -15,12 +15,12 @@ function Heading({ heading, gradientHeading, paragraph, className }: Props) {
     <AnimatedSection className="text-center mb-12">
       <AnimatedItem type='slideUp' index={0}>
         <div className="flex  w-fit mx-auto gap-2.5 font-bold flex-wrap justify-center items-center ">
-          <h1 className="text-4xl  leading-6 lg:text-[48px] text-secondary text-nowrap   ">
+          <h1 className="text-3xl  leading-6 lg:text-[48px] text-secondary text-nowrap   ">
             {heading}
           </h1>
 
           <h1
-            className={`text-4xl  lg:text-[48px] leading-12 text-nowrap
+            className={`text-3xl  lg:text-[48px] leading-12 text-nowrap
             text-primary ${className}`}
           >
             {gradientHeading}

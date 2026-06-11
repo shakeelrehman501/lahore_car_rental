@@ -10,9 +10,10 @@ function ProjectCard({ image, name, description, price }: popularCarCardType) {
   const handleWhatsApp = (name:string, price:string|number) => {
     const phoneNumber = "923004611570"; 
 
-    const message = `Hello, I want to rent this car:
-Car Name: ${name}
-Price: ${price}/day`;
+    const message = `Hello,
+I would like to rent the car "${name}" at ${price}/day.
+Please let me know if it is available.  
+Thank you.`;
 
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
@@ -77,7 +78,7 @@ function PopularCars() {
         />
 
         {/* Projects Grid */}
-        <AnimatedSection className="w-full max-w-350 min-w-66 mx-auto grid md:grid-cols-2 xl:grid-cols-3  gap-2 lg:gap-4 ">
+        <AnimatedSection className="w-full max-w-350 min-w-66 mx-auto grid md:grid-cols-2 xl:grid-cols-3  gap-5 lg:gap-4 ">
           {popularCarCard.map((project, index) => (
             <AnimatedItem key={index} type="slideUp" index={index}>
               <ProjectCard {...project} />

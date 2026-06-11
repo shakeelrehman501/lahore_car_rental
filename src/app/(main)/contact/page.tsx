@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import { useState } from "react";
 import Heading from "@/components/myComponents/Heading";
 import { ContactCardType, contactCardData } from "@/lib/data/constant";
 import { ToastContainer, toast } from "react-toastify";
@@ -47,10 +47,10 @@ function Contact() {
 
     emailjs
       .send(
-        "service_8dlxpua", // 🔴 Service ID
-        "template_llyp848", // 🔴 Template ID
+        "service_x6v1n2l", // 🔴 Service ID
+        "template_sa4dvhq", // 🔴 Template ID
         formData,
-        "TAbn0Mx7W8aIIFG5t", // 🔴 Public Key
+        "7mNHnEab_e7n2iQgm", // 🔴 Public Key
       )
       .then(
         () => {
