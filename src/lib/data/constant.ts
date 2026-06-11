@@ -43,7 +43,7 @@ export const brands:BrandType[] = [
   {
     name: "Ferrari",
     image:
-      "/others/parado.webp",
+      "/others/parado.png",
   },
 ];
 
