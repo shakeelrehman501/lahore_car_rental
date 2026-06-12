@@ -59,7 +59,7 @@ function HeroSection() {
             xl:w-140
 
 
-            ">Discover premium car rentals offering exceptional comfort, trusted reliability, and the most competitive pricing for your journeys</p>
+            ">Discover premium car rentals offering exceptional comfort, trusted reliability and the most competitive pricing for your journeys</p>
           </AnimatedItem>
 
         <AnimatedItem type="slideUp" index={4}>

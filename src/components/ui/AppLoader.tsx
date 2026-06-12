@@ -10,7 +10,7 @@ export default function AppLoader({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 90000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -22,7 +22,7 @@ export default function AppLoader({ children }: { children: React.ReactNode }) {
         {loading && (
           <motion.div
             key="splash"
-            className="fixed inset-0 z-[9999] bg-primary"
+            className="fixed inset-0 z-9999 bg-primary"
             initial={{ opacity: 1 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}

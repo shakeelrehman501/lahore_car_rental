@@ -7,9 +7,14 @@ import AppLoader from "@/components/ui/AppLoader";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata = {
+  metadataBase: new URL("https://lahorecarrent.com"),
   title: "Rent a Car in Lahore | Car Rent Lahore ",
+  description: "Best car rental in Lahore",
   icons: {
     icon: "/others/fav_icon.jpeg",
+  },
+  alternates: {
+    canonical: "/",
   },
   other: {
     "google-site-verification": "XDPj6IxXk0oZizE8lLVtNfhIL2li0sB_jWUHzdqZ33g",
