@@ -8,14 +8,28 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata = {
   metadataBase: new URL("https://lahorecarrent.com"),
-  title: "Rent a Car in Lahore | Car Rent Lahore ",
-  description: "Best car rental in Lahore",
+  title: "Car Rental in Lahore | Affordable & Luxury Cars with Driver | Lahore Car Rent",
+  description: "Affordable and reliable car rental services in Lahore. Rent luxury cars with driver at the best prices for weddings, travel and business.",
   icons: {
     icon: "/others/fav_icon.jpeg",
   },
   alternates: {
     canonical: "/",
   },
+  openGraph: {
+  siteName: "Lahore Car Rent",
+  title: "Car Rental in Lahore",
+  description: "Affordable car rental services in Lahore",
+  url: "https://lahorecarrent.com",
+  type: "website",
+  images: [
+    {
+      url: "/others/og-img.jpg",
+      width: 1200,
+      height: 630,
+    },
+  ],
+},
   other: {
     "google-site-verification": "XDPj6IxXk0oZizE8lLVtNfhIL2li0sB_jWUHzdqZ33g",
   },
