@@ -34,9 +34,6 @@ export const metadata = {
     "google-site-verification": "XDPj6IxXk0oZizE8lLVtNfhIL2li0sB_jWUHzdqZ33g",
   },
 };
-
-
-
 export default function RootLayout({
   children,
 }: Readonly<{

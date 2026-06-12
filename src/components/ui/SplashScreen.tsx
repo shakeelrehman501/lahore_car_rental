@@ -22,8 +22,8 @@ export default function SplashScreen() {
                     WebkitTextStroke: "1.5px rgba(255,255,255,0.45)",
                     color: "transparent",
                   }}
-                  initial={{ opacity: 1,  }}
-                  animate={{ opacity: 0,  }}
+                  initial={{ opacity: 1 }}
+                  animate={{ opacity: 0 }}
                   transition={{
                     delay: 0.3 + (lineIndex * 2 + i) * 0.25,
                     duration: 0.45,
@@ -36,8 +36,8 @@ export default function SplashScreen() {
                 {/* Filled */}
                 <motion.span
                   className="text-4xl sm:text-6xl md:text-7xl font-bold text-white whitespace-nowrap"
-                  initial={{ opacity: 0,  }}
-                  animate={{ opacity: 1,  }}
+                  initial={{ opacity: 0  }}
+                  animate={{ opacity: 1  }}
                   transition={{
                     delay: 0.3 + (lineIndex * 2 + i) * 0.25,
                     duration: 0.45,
