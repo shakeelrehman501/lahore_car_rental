@@ -8,7 +8,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata = {
   metadataBase: new URL("https://lahorecarrent.com"),
-  title: "Car Rental in Lahore | Affordable & Luxury Cars with Driver | Lahore Car Rent",
+  title: "Rent a Car Lahore | Best Car Rental Service in Lahore",
   description: "Affordable and reliable car rental services in Lahore. Rent luxury cars with driver at the best prices for weddings, travel and business.",
   icons: {
     icon: "/others/fav_icon.jpeg",
@@ -18,7 +18,7 @@ export const metadata = {
   },
   openGraph: {
   siteName: "Lahore Car Rent",
-  title: "Car Rental in Lahore",
+  title: "Rent a Car in Lahore",
   description: "Affordable car rental services in Lahore",
   url: "https://lahorecarrent.com",
   type: "website",
@@ -41,6 +41,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "Lahore Car Rent",
+            alternateName: "Lahore Car Rental",
+            url: "https://lahorecarrent.com",
+          }),
+        }}
+      />
+    </head>
       <body
         className={` flex flex-col  ${bricolage.variable} ${poppins.variable} `}
       >
