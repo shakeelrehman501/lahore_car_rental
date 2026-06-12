@@ -48,10 +48,10 @@ const SideBar = ({
           <MyButton
           onClick={close}
           variant="solid">Contact Us</MyButton></Link>
-            <a className="w-fit" href="https://wa.me/923216800902">
+            <a className="w-fit" href="tel:+923354611570" target="_blank" rel="noopener noreferrer">
           <div className={`group flex justify-center items-center gap-1 cursor-pointer text-primary-foreground/80`}>
             <Phone className="w-5" />
-            <span className="group-hover:text-primary">+92 321 6800902</span>
+            <span className="group-hover:text-primary">+92 335 4611570</span>
           </div>
             </a>
         </div>

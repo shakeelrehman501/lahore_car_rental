@@ -69,7 +69,7 @@ export default function AboutCEO() {
             <p className="text-[15px] tracking-widest text-primary font-semibold mb-2 uppercase">
               Meet Our CEO
             </p>
-            <h1 className="text-[56px] font-extrabold text-gray-900 leading-none m-0">
+            <h1 className="text-[40px] lg:text-[56px] font-extrabold text-gray-900 leading-none m-0">
               Shoukat Ali
             </h1>
             <p className="text-[13px] tracking-widest text-gray-500 font-semibold mt-2 mb-6 uppercase">

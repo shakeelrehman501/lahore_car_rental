@@ -10,7 +10,7 @@ interface Props {
 function LaptopNav({ isScrolled, setIsOpen }: Props) {
   return (
     <div className="hidden sm:flex justify-center items-center gap-5 lg:hidden py-2.5">
-      <a href="https://wa.me/923216800902">
+      <a href="tel:+923354611570" target="_blank" rel="noopener noreferrer">
         <div className="group flex justify-center items-center gap-1 cursor-pointer">
           <Phone className="w-5" />
           <span
@@ -22,7 +22,7 @@ function LaptopNav({ isScrolled, setIsOpen }: Props) {
                       } 
                     `}
           >
-            +92 321 6800902
+            +92 335 4611570
           </span>
         </div>
       </a>

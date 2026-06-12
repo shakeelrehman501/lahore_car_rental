@@ -4,6 +4,7 @@ import "./globals.css";
 import Footer from "@/components/service/Footer";
 import { BsWhatsapp } from "react-icons/bs";
 import AppLoader from "@/components/ui/AppLoader";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata = {
   title: "Rent a Car in Lahore | Car Rent Lahore ",
@@ -14,6 +15,8 @@ export const metadata = {
     "google-site-verification": "XDPj6IxXk0oZizE8lLVtNfhIL2li0sB_jWUHzdqZ33g",
   },
 };
+
+
 
 export default function RootLayout({
   children,
@@ -44,6 +47,7 @@ export default function RootLayout({
         </a>
 
         <Footer />
+        <SpeedInsights/>
         </AppLoader>
       </body>
     </html>
