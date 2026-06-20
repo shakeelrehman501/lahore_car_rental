@@ -10,8 +10,9 @@ import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { AnimatedItem } from "@/components/ui/AnimatedItem";
 import Image from "next/image";
 
-function ContactInfoCard({ icon: Icon, title, data }: ContactCardType) {
+function ContactInfoCard({ icon: Icon, title, data, link }: ContactCardType) {
   return (
+    <a href={link} target="_blank" rel="noopener noreferrer">
     <div className="min-h-36.5 min-w-75 max-w-100  pt-7  group hover:border-primary hover:scale-102 cursor-pointer  relative   bg-white flex flex-col items-center gap-2 justify-center rounded-2xl p-6 border border-[#e2e8f0] dark:border-[#1e293b] shadow-sm transition-all duration-300 ease-in-out ">
       {/* Icon */}
       <div className="absolute -top-6  bg-primary text-white w-12 h-12 rounded-[12px] flex items-center justify-center mb-4 transition-colors">
@@ -26,6 +27,7 @@ function ContactInfoCard({ icon: Icon, title, data }: ContactCardType) {
         {data}
       </p>
     </div>
+    </a>
   );
 }
 

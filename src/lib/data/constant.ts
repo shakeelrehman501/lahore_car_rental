@@ -186,24 +186,28 @@ export const feedbackCardItems = [
 export interface ContactCardType {
   icon:IconType,
   title:string,
-  data:string
+  data:string,
+  link:string
 }
 
 export const contactCardData:ContactCardType[] = [
   {
     icon:HiOutlineMail, 
     title:"Email",
-    data:"lahorecarrent@gmail.com"
+    data:"lahorecarrent@gmail.com",
+    link: "mailto:lahorecarrent@gmail.com",
   },
   {
     icon:FiPhoneCall, 
     title:"Phone",
-    data:"0335-4611570"
+    data:"0335-4611570",
+    link: "tel:03354611570",
   },
   {
     icon:GrLocation, 
     title:"Location",
-    data:"153-H, Commercial Zone, Phase 1, DHA Lahore Cantt, Lahore"
+    data:"153-H, Commercial Zone, Phase 1, DHA Lahore Cantt, Lahore",
+    link: "https://www.google.com/maps/place/31%C2%B028'56.7%22N+74%C2%B023'50.2%22E/@31.4824151,74.3972712,17z/data=!3m1!4b1!4m4!3m3!8m2!3d31.4824151!4d74.3972712?entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D",
   },
 ]
 

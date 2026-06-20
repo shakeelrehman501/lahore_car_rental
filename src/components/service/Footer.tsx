@@ -84,24 +84,33 @@ export default function Footer() {
             <AnimatedItem type="slideRight" index={0}>
               <h3 className="text-lg mb-4">Contact Us</h3>
               <ul className="space-y-4">
-                <li className="flex items-start gap-3 text-gray-400">
+                <a className="w-fit" href="https://www.google.com/maps/place/31%C2%B028'56.7%22N+74%C2%B023'50.2%22E/@31.4824151,74.3972712,17z/data=!3m1!4b1!4m4!3m3!8m2!3d31.4824151!4d74.3972712?entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D">
+                <li className="group flex items-start gap-3 text-gray-400">
                   <MapPin
                     size={20}
                     className="shrink-0 text-[#FF2E2E] mt-1"
                   />
-                  <span>
+                  <span className="group-hover:text-primary">
                     153-H, Commercial Zone, Phase 1, DHA Lahore Cantt, Lahore,
                     Pakistan
                   </span>
                 </li>
-                <li className="flex items-center gap-3 text-gray-400">
+                </a>
+
+                
+                <a className="w-fit" href="tel:+923354611570" target="_blank" rel="noopener noreferrer">
+                <li className="group flex items-center gap-3 text-gray-400">
                   <Phone size={20} className="shrink-0 text-[#FF2E2E]" />
-                  <span>+92 335 4611570</span>
+                  <span className="group-hover:text-primary">+92 335 4611570</span>
                 </li>
-                <li className="flex items-center gap-3 text-gray-400">
+                </a>
+                
+                <a className="w-fit" href="mailto:lahorecarrent@gmail.com">
+                <li className="group flex items-center gap-3 text-gray-400">
                   <Mail size={20} className="shrink-0 text-[#FF2E2E]" />
-                  <span>lahorecarrent@gmail.com</span>
+                  <span className="group-hover:text-primary">lahorecarrent@gmail.com</span>
                 </li>
+                </a>
               </ul>
             </AnimatedItem>
           </AnimatedSection>
