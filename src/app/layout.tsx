@@ -26,7 +26,7 @@ export const metadata = {
   type: "website",
   images: [
     {
-      url: "https://lahorecarrent.com/others/og-img.webp",
+      url: "https://lahorecarrent.com/og-img.webp",
       width: 1200,
       height: 630,
     },
@@ -39,7 +39,7 @@ export const metadata = {
   card: "summary_large_image",
   title: "Rent a Car Lahore",
   description: "Affordable car rental services in Lahore",
-  images: ["https://lahorecarrent.com/others/og-img.webp"],
+  images: ["https://lahorecarrent.com/og-img.webp"],
 }
 };
 export default function RootLayout({
