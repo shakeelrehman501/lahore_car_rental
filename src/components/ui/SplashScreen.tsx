@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "motion/react";
 
-const lines = [["Lahore"], ["Car", "Rentals"]];
+const lines = [["Lahore"], ["Car", "Rent"]];
 
 export default function SplashScreen() {
   return (
