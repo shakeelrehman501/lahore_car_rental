@@ -43,9 +43,9 @@ function About() {
           className={`w-full h-full object-cover ${loading ? "opacity-0" : "opacity-100"}`}
         />
         <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-          <h1 className="text-white text-3xl md:text-4xl lg:text-5xl font-bold tracking-wider">
+          {/* <h1 className="text-white text-3xl md:text-4xl lg:text-5xl font-bold tracking-wider">
             About Us
-          </h1>
+          </h1> */}
         </div>
       </div>
 
