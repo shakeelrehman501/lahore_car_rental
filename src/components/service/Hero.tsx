@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import MyButton from "@/components/myComponents/MyButton";
-import Link from "next/link";
 import { montserrat } from "@/lib/fonts";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { AnimatedItem } from "@/components/ui/AnimatedItem";
@@ -63,9 +62,11 @@ function HeroSection() {
           </AnimatedItem>
 
         <AnimatedItem type="slideUp" index={4}>
-          <Link href="/contact">
+          <a href="https://wa.me/923004611570"
+            target="_blank"
+            rel="noopener noreferrer">
             <MyButton variant="solid"> Book now</MyButton>
-          </Link>
+          </a>
         </AnimatedItem>
       </AnimatedSection>
 
