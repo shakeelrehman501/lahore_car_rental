@@ -5,12 +5,12 @@ const lines = [["Lahore"], ["Car", "Rent"]];
 
 export default function SplashScreen() {
   return (
-    <div className=" flex flex-col gap-8 bg-blue-500 items-center justify-center ">
+    <div className="size-full flex flex-col gap-8  items-center justify-center ">
       {/* Animated Circle size-full */}
       <div className="w-14 h-14 sm:w-20 sm:h-20 border-3 border-white/20 border-t-white rounded-full animate-spin" />
 
       {/* Brand Name — each letter: outline → filled */}
-      <div className="relative flex flex-col items-center gap-3 sm:gap-5 md:gap-6 font-poppins ">
+      <div className=" relative flex flex-col items-center gap-3 sm:gap-5 md:gap-6 font-poppins ">
         {lines.map((line, lineIndex) => (
           <div key={lineIndex} className="flex items-center gap-4">
             {line.map((word, i) => (
