@@ -5,9 +5,9 @@ const lines = [["Lahore"], ["Car", "Rent"]];
 
 export default function SplashScreen() {
   return (
-    <div className="w-full min-w-full h-full min-h-full flex flex-col gap-8 items-center justify-center bg-primary">
+    <div className=" flex flex-col gap-8 items-center justify-center ">
       {/* Animated Circle size-full */}
-      <div className="w-14 h-14 sm:w-20 sm:h-20 border-2 border-white/20 border-t-white rounded-full animate-spin" />
+      <div className="w-14 h-14 sm:w-20 sm:h-20 border-3 border-white/20 border-t-white rounded-full animate-spin" />
 
       {/* Brand Name — each letter: outline → filled */}
       <div className="relative flex flex-col items-center gap-3 sm:gap-5 md:gap-6 font-poppins ">
@@ -36,8 +36,8 @@ export default function SplashScreen() {
                 {/* Filled */}
                 <motion.span
                   className="text-4xl sm:text-6xl md:text-7xl font-bold text-white whitespace-nowrap"
-                  initial={{ opacity: 0  }}
-                  animate={{ opacity: 1  }}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
                   transition={{
                     delay: 0.3 + (lineIndex * 2 + i) * 0.25,
                     duration: 0.45,

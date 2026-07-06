@@ -18,11 +18,12 @@ export default function AppLoader({ children }: { children: React.ReactNode }) {
   return (
     <>
      {children}
+        
       <AnimatePresence>
         {loading && (
           <motion.div
             key="splash"
-            className="fixed inset-0 z-9999 bg-primary"
+            className="fixed  inset-0 z-9999 bg-primary w-full  min-h-screen flex item-center justify-center"
             initial={{ opacity: 1 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
