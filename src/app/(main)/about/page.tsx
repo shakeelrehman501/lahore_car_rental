@@ -26,21 +26,23 @@ function AboutCard({ icon: Icon, title, description }: AboutCardType) {
 }
 
 function About() {
-   const [loading, setLoading] = useState(false);
+  const [imageLoading, setImageLoading] = useState(true); 
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <div className="relative h-75 md:h-90 lg:h-110 xl:h-120 2xl:h-150 w-full">
-        {loading && (
-              <div className="absolute inset-0 bg-gray-300  animate-pulse" />
-            )}
+        {imageLoading && (
+          <div className="absolute inset-0 flex items-center justify-center bg-gray-200 z-10">
+            <div className="w-10 h-10 border-4 border-gray-300 border-t-primary rounded-full animate-spin"></div>
+          </div>
+        )}
         <Image
           src="/others/aboutus.webp"
           alt="About_Image"
           width={3000}
           height={2000}
-          onLoad={() => setLoading(false)}
-          className={`w-full h-full object-cover ${loading ? "opacity-0" : "opacity-100"}`}
+          onLoad={() => setImageLoading(false)}
+          className={`w-full h-full object-cover ${imageLoading ? "opacity-0" : "opacity-100"}`}
         />
         <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
           {/* <h1 className="text-white text-3xl md:text-4xl lg:text-5xl font-bold tracking-wider">

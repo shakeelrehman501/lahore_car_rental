@@ -7,9 +7,9 @@ import { useState } from "react";
 import Image from "next/image";
 
 function ProjectCard({ image, name, description, price }: popularCarCardType) {
-  const [loading, setLoading] = useState(true);
-  const handleWhatsApp = (name:string, price:string|number) => {
-    const phoneNumber = "923004611570"; 
+  const [imageLoading, setImageLoading] = useState(true);
+  const handleWhatsApp = (name: string, price: string | number) => {
+    const phoneNumber = "923004611570";
 
     const message = `Hello,
 I would like to rent the car "${name}" at ${price}/day.
@@ -26,18 +26,20 @@ Thank you.`;
     <div className="min-w-80 bg-white rounded-lg overflow-hidden  shadow-md hover:shadow-2xl transition-all duration-300  hover:-translate-y-2 group ease-in-out">
       {/* Car Image */}
       <div className="relative overflow-hidden h-80 bg-linear-to-br from-gray-100 to-gray-200">
-        {loading && (
-              <div className="absolute inset-0 bg-gray-300 dark:bg-gray-700 animate-pulse" />
-            )}
+        {imageLoading && (
+          <div className="absolute inset-0 flex items-center justify-center bg-gray-200 z-10">
+            <div className="w-10 h-10 border-4 border-gray-300 border-t-primary rounded-full animate-spin"></div>
+          </div>
+        )}
         <Image
           src={image}
           alt={name}
           width={2000}
           height={1600}
-          onLoad={() => setLoading(false)}
+          onLoad={() => setImageLoading(false)}
           className={`w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 ${
-                loading ? "opacity-0" : "opacity-100"
-              }
+            imageLoading ? "opacity-0" : "opacity-100"
+          }
           `}
           loading="lazy"
         />
@@ -57,11 +59,12 @@ Thank you.`;
           <h1 className="text-[22px] text-gray-700  font-poppins font-semibold group-hover:text-primary transition-all duration-300 ease-in-out">
             PKR {price}/day
           </h1>
-            <button
+          <button
             onClick={() => handleWhatsApp(name, price)}
-            className="px-3 py-2 font-semibold bg-[#FF2E2E] hover:bg-[#e02626] text-white  rounded-md transition-all duration-300 hover:shadow-lg cursor-pointer">
-              Rent Now
-            </button>
+            className="px-3 py-2 font-semibold bg-[#FF2E2E] hover:bg-[#e02626] text-white  rounded-md transition-all duration-300 hover:shadow-lg cursor-pointer"
+          >
+            Rent Now
+          </button>
         </div>
       </div>
     </div>
@@ -69,11 +72,10 @@ Thank you.`;
 }
 
 function PopularCars() {
-  
   return (
     <section
       id="projects"
-      className="bg-gray-100  py-16 lg:py-20 transition-colors w-full"
+      className="  py-16 lg:py-20 transition-colors w-full"
     >
       <div className="px-4 sm:px-6 lg:px-8">
         {/* Header */}

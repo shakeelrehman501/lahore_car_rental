@@ -1,9 +1,10 @@
-
+"use client";
 import { whyChooseUsFeatures, WhyChooseUsType } from "../../lib/data/constant";
 import Heading from "@/components/myComponents/Heading";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { AnimatedItem } from "@/components/ui/AnimatedItem";
 import Image from "next/image";
+import { useState } from "react";
 
 function WhyChooseUsCard({ icon: Icon, title, description }: WhyChooseUsType) {
   return (
@@ -26,8 +27,9 @@ function WhyChooseUsCard({ icon: Icon, title, description }: WhyChooseUsType) {
 }
 
 export default function WhyChooseUs() {
+  const [imageLoading, setImageLoading] = useState(true);
   return (
-    <section id="about" className="py-20 bg-white">
+    <section id="about" className="py-20 bg-gray-50">
       <div className={` sm:px-6 lg:px-8 transition-all duration-1000 `}>
         <Heading
           heading="Why"
@@ -40,14 +42,22 @@ export default function WhyChooseUs() {
           <AnimatedSection>
             <AnimatedItem type="slideLeft" index={0}>
               <div className="relative">
+                {imageLoading && (
+                  <div className="absolute inset-0 flex items-center justify-center bg-gray-200 rounded-lg z-20">
+                    <div className="w-10 h-10 border-4 border-gray-300 border-t-primary rounded-full animate-spin"></div>
+                  </div>
+                )}
                 <div className="relative z-10 px-3 lg:px-1">
                   <Image
                     src="/others/fortuner_car.webp"
                     alt="Car"
                     width={2000}
                     height={1400}
+                    onLoad={() => setImageLoading(false)}
                     loading="lazy"
-                    className="w-full h-90 sm:h-120 object-cover rounded-lg "
+                    className={`w-full h-90 sm:h-120 object-cover rounded-lg transition-opacity duration-300 ${
+                      imageLoading ? "opacity-0" : "opacity-100"
+                    }`}
                   />
                 </div>
               </div>

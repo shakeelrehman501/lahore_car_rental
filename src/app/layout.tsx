@@ -19,28 +19,28 @@ export const metadata = {
     canonical: "https://lahorecarrent.com/",
   },
   openGraph: {
-  siteName: "Lahore Car Rent",
-  title: "Rent a Car in Lahore",
-  description: "Affordable car rental services in Lahore",
-  url: "https://lahorecarrent.com/",
-  type: "website",
-  images: [
-    {
-      url: "https://lahorecarrent.com/og-img.webp",
-      width: 1200,
-      height: 630,
-    },
-  ],
-},
+    siteName: "Lahore Car Rent",
+    title: "Rent a Car in Lahore",
+    description: "Affordable car rental services in Lahore",
+    url: "https://lahorecarrent.com/",
+    type: "website",
+    images: [
+      {
+        url: "https://lahorecarrent.com/og-img.webp",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
   other: {
     "google-site-verification": "XDPj6IxXk0oZizE8lLVtNfhIL2li0sB_jWUHzdqZ33g",
   },
   twitter: {
-  card: "summary_large_image",
-  title: "Rent a Car Lahore",
-  description: "Affordable car rental services in Lahore",
-  images: ["https://lahorecarrent.com/og-img.webp"],
-}
+    card: "summary_large_image",
+    title: "Rent a Car Lahore",
+    description: "Affordable car rental services in Lahore",
+    images: ["https://lahorecarrent.com/og-img.webp"],
+  },
 };
 export default function RootLayout({
   children,
@@ -50,18 +50,20 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-       <Script
-type="application/ld+json"
-dangerouslySetInnerHTML={{
-__html: JSON.stringify({
-"@context":"https://schema.org",
-"@type":"Organization",
-"name":"Lahore Car Rent",
-"url":"https://lahorecarrent.com",
-"logo":"https://lahorecarrent.com/logo.png"
-})
-}}
-/>
+        <Script
+          id="organization-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Lahore Car Rent",
+              url: "https://lahorecarrent.com",
+              logo: "https://lahorecarrent.com/logo.png",
+              image: "https://lahorecarrent.com/og-img.webp",
+            }),
+          }}
+        />
       </head>
       <body
         className={` flex flex-col  ${bricolage.variable} ${poppins.variable} `}

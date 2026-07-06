@@ -13,20 +13,20 @@ import Image from "next/image";
 function ContactInfoCard({ icon: Icon, title, data, link }: ContactCardType) {
   return (
     <a href={link} target="_blank" rel="noopener noreferrer">
-    <div className="min-h-36.5 min-w-75 max-w-100  pt-7  group hover:border-primary hover:scale-102 cursor-pointer  relative   bg-white flex flex-col items-center gap-2 justify-center rounded-2xl p-6 border border-[#e2e8f0] dark:border-[#1e293b] shadow-sm transition-all duration-300 ease-in-out ">
-      {/* Icon */}
-      <div className="absolute -top-6  bg-primary text-white w-12 h-12 rounded-[12px] flex items-center justify-center mb-4 transition-colors">
-        <Icon size={24} />
+      <div className="min-h-36.5 min-w-75 max-w-100  pt-7  group hover:border-primary hover:scale-102 cursor-pointer  relative   bg-white flex flex-col items-center gap-2 justify-center rounded-2xl p-6 border border-[#e2e8f0] dark:border-[#1e293b] shadow-sm transition-all duration-300 ease-in-out ">
+        {/* Icon */}
+        <div className="absolute -top-6  bg-primary text-white w-12 h-12 rounded-[12px] flex items-center justify-center mb-4 transition-colors">
+          <Icon size={24} />
+        </div>
+        {/* Heading */}
+        <h3 className=" font-bold pt-1 text-[20px] text-gray-700 group-hover:text-primary tracking-[-0.45px] leading-7 mb-2 transition-colors">
+          {title}
+        </h3>
+        {/* Info */}
+        <p className="text-center  text-[17px] text-[#64748b] group-hover:text-primary leading-6 transition-colors">
+          {data}
+        </p>
       </div>
-      {/* Heading */}
-      <h3 className=" font-bold pt-1 text-[20px] text-gray-700 group-hover:text-primary tracking-[-0.45px] leading-7 mb-2 transition-colors">
-        {title}
-      </h3>
-      {/* Info */}
-      <p className="text-center  text-[17px] text-[#64748b] group-hover:text-primary leading-6 transition-colors">
-        {data}
-      </p>
-    </div>
     </a>
   );
 }
@@ -38,6 +38,7 @@ function Contact() {
     message: "",
   });
   const [loading, setLoading] = useState(false);
+  const [imageLoading, setImageLoading] = useState(true);
   const handleChange = (e: any) => {
     e.preventDefault();
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -90,16 +91,18 @@ function Contact() {
       />
 
       <div className="relative h-75 md:h-90 lg:h-110 xl:h-120 2xl:h-150 w-full">
-        {loading && (
-          <div className="absolute inset-0 bg-gray-300  animate-pulse" />
+        {imageLoading && (
+          <div className="absolute inset-0 flex items-center justify-center bg-gray-200 z-10">
+            <div className="w-10 h-10 border-4 border-gray-300 border-t-primary rounded-full animate-spin"></div>
+          </div>
         )}
         <Image
           src="/others/contactus.webp"
           width={3000}
           height={2000}
           alt="City_Skyline"
-          onLoad={() => setLoading(false)}
-          className={`w-full h-full object-cover ${loading ? "opacity-0" : "opacity-100"}`}
+          onLoad={() => setImageLoading(false)}
+          className={`w-full h-full object-cover transition-opacity duration-300 ${imageLoading ? "opacity-0" : "opacity-100"}`}
         />
         <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
           {/* <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-bold tracking-wider">

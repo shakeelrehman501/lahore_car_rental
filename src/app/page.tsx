@@ -1,4 +1,3 @@
-import BrandSlider from "@/components/service/BrandSlider";
 import Feedback from "@/components/service/Feedback";
 import HeroSection from "@/components/service/Hero";
 import Projects from "@/components/service/PopularCars";
@@ -47,9 +46,6 @@ export default function Home() {
           <HeroSection />
         </div>
       </div>
-          <div className="bg-secondary  ">
-          <BrandSlider/>
-          </div>
           <div className="">
             <Projects/>
             <WhyChooseUs/>
