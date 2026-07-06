@@ -5,7 +5,7 @@ const lines = [["Lahore"], ["Car", "Rent"]];
 
 export default function SplashScreen() {
   return (
-    <div className=" flex flex-col gap-8 items-center justify-center ">
+    <div className=" flex flex-col gap-8 bg-blue-500 items-center justify-center ">
       {/* Animated Circle size-full */}
       <div className="w-14 h-14 sm:w-20 sm:h-20 border-3 border-white/20 border-t-white rounded-full animate-spin" />
 
