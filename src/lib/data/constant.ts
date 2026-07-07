@@ -94,7 +94,7 @@ export const popularCarCard:popularCarCardType[] = [
   },
   {
     id: 6,
-    name: "Yasir",
+    name: "Yaris",
     description:"Compact, comfortable and fuel-efficient car perfect for everyday city travel needs.",
     price: "6,000",
     image: "/cardImages/card_img_6.webp",
