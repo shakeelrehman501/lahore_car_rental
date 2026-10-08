@@ -1,36 +1,106 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Lahore Car Rental
 
-## Getting Started
+A modern and responsive car rental website developed for Lahore Car Rental to provide customers with a professional platform for exploring premium vehicles, rental services, and booking options.
 
-First, run the development server:
+## Live Website
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+https://lahorecarrent.com/
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Project Overview
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Lahore Car Rental is a modern business website designed to provide a seamless and professional car rental experience for customers in Lahore.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The platform allows visitors to explore available vehicles, view rental prices, learn about different rental services, and get in touch with the rental team for bookings and inquiries.
 
-## Learn More
+The project focuses on creating a clean user interface, responsive layouts, clear service presentation, and a convenient booking experience.
 
-To learn more about Next.js, take a look at the following resources:
+## Key Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Fully responsive design
+- Modern and professional user interface
+- Premium vehicle showcase
+- Vehicle rental pricing
+- Rental service information
+- WhatsApp-based booking integration
+- Responsive navigation
+- Mobile-friendly interface
+- Clear calls to action
+- Structured and scalable frontend architecture
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Rental Services
 
-## Deploy on Vercel
+The website provides information about multiple rental services, including:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Wedding Car Rental
+- Airport Transfer
+- Corporate Rental
+- Long-Term Rental
+- Chauffeur Service
+- Luxury Car Rental
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Vehicle Showcase
+
+The website includes a selection of vehicles with dedicated information such as vehicle name, description, and rental pricing.
+
+Featured vehicles include:
+
+- Land Cruiser V8 / LC300
+- Toyota Corolla
+- Prado
+- Honda Civic
+- Grande
+- Toyota Yaris
+
+Each vehicle is presented with a clear call to action that allows users to proceed with their rental inquiry.
+
+## Technology Stack
+
+The project was developed using modern frontend technologies:
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- HTML5
+- CSS3
+- JavaScript
+- Git
+- GitHub
+
+## Project Architecture
+
+The application follows a component-based frontend architecture designed to keep the codebase organized, reusable, maintainable, and scalable.
+
+The project separates pages, reusable components, UI elements, hooks, icons, utilities, and static assets to maintain a clean development structure.
+
+## Project Structure
+
+```text
+project-root/
+├── public/
+│   └── Static assets and publicly accessible files
+│
+├── src/
+│   ├── app/
+│   │   ├── (main)/
+│   │   │   ├── about/
+│   │   │   ├── contact/
+│   │   │   └── portfolio/
+│   │   │
+│   │   ├── globals.css
+│   │   ├── layout.tsx
+│   │   └── page.tsx
+│   │
+│   ├── components/
+│   │   ├── MyComponents/
+│   │   ├── navbar/
+│   │   ├── service/
+│   │   └── ui/
+│   │
+│   ├── hooks/
+│   ├── icons/
+│   └── lib/
+│
+├── package.json
+├── tsconfig.json
+└── ...
